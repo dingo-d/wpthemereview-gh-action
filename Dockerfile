@@ -1,5 +1,10 @@
 FROM php:7.4-cli
 
+# Dependencies
+RUN set -ex \
+  && apt-get update && apt-get install -y build-essential \
+  git zip unzip
+
 # Composer setup
 RUN set -ex \
   && EXPECTED_SIGNATURE="$(curl -sL https://composer.github.io/installer.sig)" \
