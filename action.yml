@@ -2,7 +2,7 @@ name: 'PHPCS GitHub action running WPThemeReview checks'
 description: 'Runs phpcs checks with WPThemeReview standards'
 branding:
   icon: 'check-square'
-  colo: 'blue'
+  color: 'blue'
 inputs:
   wp_version:
     description: 'Version of WordPress to check the compatibility'
