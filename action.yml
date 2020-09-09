@@ -1,0 +1,27 @@
+name: 'PHPCS GitHub action running WPThemeReview checks'
+description: 'Runs phpcs checks with WPThemeReview standards'
+inputs:
+  wp_version:
+    description: 'Version of WordPress to check the compatibility'
+    required: true
+    default: '5.5.1'
+  php_version:
+    description: 'Version of PHP to check the compatibility'
+    required: true
+    default: '7.4'
+  prefix:
+    description: 'Prefix of your theme'
+    required: false
+    default: ''  
+  ignore:
+    description: 'Folders to ignore'
+    required: false
+    default: 'vendor'  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.wp_version }}
+    - ${{ inputs.php_version }}
+    - ${{ inputs.prefix }}
+    - ${{ inputs.prefignoreix }}

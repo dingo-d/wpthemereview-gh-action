@@ -1,0 +1,15 @@
+name: "CI"
+
+on: ["push", "pull_request"]
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout code"
+        uses: "actions/checkout@v2"
+
+      - name: "Build Docker image"
+        uses: "docker/build-push-action@v1"
+        with:
+          push: false
