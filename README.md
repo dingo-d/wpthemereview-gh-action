@@ -27,7 +27,7 @@ jobs:
 
         # Run phpcs checks
         - name: Run PHPCS inspection
-          uses: dingo-d/wpthemereview-gh-action@0.0.1
+          uses: dingo-d/wpthemereview-gh-action@0.0.2
           with:
             wp_version: 5.5.1
             php_version: 7.4
